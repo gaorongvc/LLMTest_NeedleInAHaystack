@@ -1,0 +1,54 @@
+Stable Diffusion老板也跑了！核心研发已集体辞职，“稳定AI”乱成一锅粥                          机器学习算法与自然语言处理              机器学习算法与自然语言处理微信号MLNLPer-World功能介绍关注AI前沿技术，助力AI学者进步MLNLP社区是国内外知名的机器学习与自然语言处理社区，受众覆盖国内外NLP硕博生、高校老师以及企业研究人员。
+社区的愿景是促进国内外自然语言处理，机器学习学术界、产业界和广大爱好者之间的交流和进步，特别是初学者同学们的进步。
+转载自 | 量子位作者 | 明敏 丰色好突然！就在今天，Stability AI CEO宣布辞职了。
+Emad Mostaque，既不再担任CEO，公司董事会也退出。
+消息一出，大伙都无比震惊。
+Stability AI再也不stable了。
+据悉，首席运营官Shan Shan Wong和首席技术官Christian Laforte将担任临时CEO。
+更早之前，Stable的核心研发团队，集体辞职了。
+ps.现在的CTO也刚上来不久，前CTO Tom Mason的领英都还没来得及更新呢这家最当红的AI独角兽，究竟发生了什么？CEO要去搞AI开放了公告除了宣布CEO辞任的事情，还表示将要招聘一位可长期任职的CEO，以带领公司进入下一个增长阶段。
+原CEO的下一站没有明确，他表示要去投身AI开放和去中心化工作中去了。
+在公告中他说，很骄傲从引入第一位开发者至今，Stability已经获得了数亿次下载量，并创造了跨模态的最佳模型。
+我坚信Stability AI的使命，并认为公司要掌握在有能力者的手中。
+Stability AI董事会主席也肯定了Emad的工作：非常感谢Emad对Stability AI和开源工作的领导和承诺。
+不过，“和平分手”背后，Stability AI高层的动荡远不止此。
+据统计从去年3月至今，已有至少19名高管或关键人物出走。
+CTO也也刚刚换新，据称随着新CTO的上任，公司战略可能向语言模型偏转。
+有消息显示Emad的辞职与核心团队辞职、和投资人产生矛盾有关。
+彭博社消息称，由于投资者就公司财务状况向管理层施压，Stability AI考虑出售公司。
+去年秋天公司曾与多家公司就收购进行早期谈判。
+而且去年公司高层也非常动荡。
+值得一提的是，Emad在任职期间，被曝出过不少黑料，包括：学历/工作经验造假、拖欠员工工资、诓骗投资人、挪用公款等。
+且爆料人正是前员工们，如果包含投资人在内，一共30多人进行了指控。
+Stability AI的联创Cyrus Hodes甚至还就“欺诈和挪用公款”一事专门起诉过Emad。
+但我们无法得知，Emad的辞职和这些是否有关。
+不过可以确定的是，在这段“和平分手”背后，Stability AI的动荡已经昭然若揭。
+就在两天前，前CEO Emad Mostaque亲自在内部全体会议上宣布:Stable Diffusion核心研究团队集体辞职。
+包括研究团队领导、论文一作Robin Rombach，共同一作Andreas Blattmann，以及另一位作者Dominik Lorenz。
+Stability AI怎么了？Stability AI的成功很大程度上可以直接归因于Stable Diffusion。
+正如前文所述，Stable Diffusion最初是一个学术研究项目。
+由Björn Ommer教授领衔，Robin Rombach、Andreas Blattmann、Dominik Lorenz这三位慕尼黑大学机器视觉与学习研究小组成员，以及Runway的研究人员完成。
+研究论文发表七个月后，Stability AI开始介入，提供计算资源，以进一步开发文本到图像生成模型。
+Stable Diffusion刚正式发布一个月就火爆圈内外，促使Stability AI在2022年A轮融资中，筹集到1.01亿美元，估值迅速攀升到10亿美元。
+值得一提的是，Stable Diffusion的爆火不仅仅是因为效果，更是因为其免费开源。
+不过，也正是由于Stable Diffusion足够开放，所以Stability AI的商业模式并不明了。
+换句话说，就是不能稳定地挣钱。
+而根据彭博社此前的爆料，该公司每个月至少要花费800万美元（人民币约5700万元）来支持业务运营。
+《福布斯》则直接指出：内部文件显示，StabilityAI的支出大大超过了收入。
+去年年底，Stability AI还一度传出因财务状况压力而寻求出售的消息。
+据《商业内幕》爆料，CEO Emad Mostaque还曾经警告Stability AI员工行业竞争激烈：你们都会在2023年死去。
+几天前的核心团队突然辞职，《福布斯》也爆料了原因：Stability Al正因入不敷出且融不到新资金而陷入困境。
+网友也因此担心，尚未全面开放的Stable Diffusion 3，还能开源吗？值得一提的是，目前不只Stability AI一家AI初创公司面临商业化的困境。
+估值40亿美元的Inflection AI也面临着分崩离析的状况。
+其CEO（DeepMind联创穆斯塔法-苏莱曼）和首席科学家均已前往微软赴任，在微软领导新成立的AI部门，并且带走了Inflection AI大批员工。
+要知道，微软可是Inflection AI的投资方，只要人不要公司，很大一部分原因应该来自Inflection AI目前遭遇的窘境。
+成立至今，Inflection AI旗下大模型已迭代到2.5代，推出了主打私人陪伴的AI产品PI。
+但是过去三个月，Pi网站每月平均访问量只有不到400万左右。
+这意味着Pi在全球AI产品流量排名至少在50位开外了。
+而且在商业化方面，Inflection AI也没有明显进展。
+如今图像生成的头部玩家Stability AI也面临窘境……大模型浪潮下，商业化该如何推进？正在考验着所有初创公司。
+大逃杀已经开始了。
+参考链接：[1]https://www.forbes.com/sites/iainmartin/2024/03/20/key-stable-diffusion-researchers-leave-stability-ai-as-company-flounders/[2]https://www.techmeme.com/240320/p29#a240320p29技术交流群邀请函△长按添加小助手扫描二维码添加小助手微信请备注：姓名-学校/公司-研究方向（如：小张-哈工大-对话系统）即可申请加入自然语言处理/Pytorch等技术交流群关于我们MLNLP 社区是由国内外机器学习与自然语言处理学者联合构建的民间学术社区，目前已经发展为国内外知名的机器学习与自然语言处理社区，旨在促进机器学习，自然语言处理学术界、产业界和广大爱好者之间的进步。
+社区可以为相关从业者的深造、就业及研究等方面提供开放交流平台。
+欢迎大家关注和加入我们。
+预览时标签不可点

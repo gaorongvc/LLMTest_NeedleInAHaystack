@@ -1,0 +1,14 @@
+检测一切！Visual Prompting：视觉提示扩展检测模型能力                                                李峰                                                  CVer              CVer微信号CVerNews功能介绍一个专注于计算机视觉方向的公众号。
+分享计算机视觉、深度学习、人工智能、自动驾驶和高校等高质量内容。
+点击下方卡片，关注“CVer”公众号AI/CV重磅干货，第一时间送达点击进入—>【目标检测和多模态】交流群添加微信：CVer5555，小助手会拉你进群！扫描下方二维码，加入CVer学术星球！可以获得最新顶会/顶刊上的论文idea和CV从入门到精通资料，及最前沿应用！发论文/搞科研/涨薪，强烈推荐！宣传一下最近我们 做的几个工作，集中在通过视觉提示(visual prompt)来扩展检测模型的能力，例如open-set和counting的English。
+code/demo/API都已经可用！DINOv:论文：arxiv.org/pdf/2311.13601主页：github.com/UX-Decoder/DINOvT-Rex：论文：arxiv.org/abs/2311.13596主页：github.com/IDEA-Research/T-RexT-Rex2: 论文：arxiv.org/pdf/2403.14610主页：deepdataspace.com/playground/ivpDINOv大型语言模型（LLMs）中的上下文提示(in-context prompting) 已成为提高模型能力的方法，但在视觉领域，这个想法被探索得较少。
+现有的视觉提示方法专注于refering segmentation来分割最相关的对象，未能解决许多通用视觉任务，如open-set分割和检测DINOv探索的是通过visual prompt来实现visual in-context learning，例如要检测一个新的物体或者某些难以描述的物体，只需要给模型几个样例，模型就可以在target image里面把想要的物体都检测出来。
+T-RexT-Rex探索的是通过visual prompt来解决counting问题。
+counting问题往往比较密集且物体不太好用文本描述，把counting问题转化为检测问题并通过visual prompt能更加高效地处理counting问题。
+T-RexT-Rex2则进一步把visual prompt和text prompt融合到一个模型里面，进一步提升检测能力。
+T-Rex2接受多种格式的输入，包括文本提示、视觉提示以及两者的组合，因此它可以通过在两种提示模式之间切换来处理不同的场景。
+我们的实验表明，T-Rex2在各种场景下展现出出色的zero-shot目标检测能力。
+我们展示了文本提示和视觉提示可以在协同作用中相互受益，这对于覆盖大规模且复杂的实际场景至关重要。
+欢迎关注！在CVer公众号后台回复：检测一切，即可下载上面论文和代码，感觉学起来！何恺明在MIT授课的课件PPT下载在CVer公众号后台回复：何恺明，即可下载本课程的所有566页课件PPT！赶紧学起来！CVPR 2024 论文和代码下载在CVer公众号后台回复：CVPR2024，即可下载CVPR 2024论文和代码开源的论文合集多模态和目标检测交流群成立扫描下方二维码，或者添加微信：CVer5555，即可添加CVer小助手微信，便可申请加入CVer-多模态和目标检测微信交流群。
+另外其他垂直方向已涵盖：目标检测、图像分割、目标跟踪、人脸检测&识别、OCR、姿态估计、超分辨率、SLAM、医疗影像、Re-ID、GAN、NAS、深度估计、自动驾驶、强化学习、车道线检测、模型剪枝&压缩、去噪、去雾、去雨、风格迁移、遥感图像、行为识别、视频理解、图像融合、图像检索、论文投稿&交流、PyTorch、TensorFlow和Transformer、NeRF等。
+一定要备注：研究方向+地点+学校/公司+昵称（如多模态或者目标检测+上海+上交+卡卡），根据格式备注，可更快被通过且邀请进群▲扫码或加微信号: CVer5555，进交流群CVer计算机视觉（知识星球）来了！想要了解最新最快最好的CV/DL/AI论文速递、优质实战项目、AI行业前沿、从入门到精通学习教程等资料，欢迎扫描下方二维码，加入CVer计算机视觉（知识星球），已汇集近万人！▲扫码加入星球学习▲点击上方卡片，关注CVer公众号整理不易，请点赞和在看预览时标签不可点

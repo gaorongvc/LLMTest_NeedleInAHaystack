@@ -1,0 +1,45 @@
+词曲创作只需几秒，「AI作曲家」Suno引爆音乐圈，第一手体验和攻略来了          原创                                      关注大模型的                                                  机器之心              机器之心微信号almosthuman2014功能介绍专业的人工智能媒体和产业服务平台机器之心报道编辑：杜伟、蛋酱有了 Suno 这个「作曲助手」，人人都可以创建自己想听的歌曲。
+自从 ChatGPT 在 2022 年底爆火以来，我们已经看到 AI 生成的诸多艺术创作成果：ChatGPT 写出过情节引人入胜的网文，Midjourney 生成过肉眼难辨的人像。
+最近，AI 搞创作的风终于吹到了「歌曲生成」领域，一款名为 Suno 的 AI 驱动的歌曲生成器，在社区内开始了病毒式传播。
+其实此前陆续推出的 AI 音乐生成器并不少，比如 Adobe 的 Project Music GenAI ， YouTube 的 Dream Track 和 Voicify AI（现在的 Jammable）。
+但只有 Suno 被称为「音乐界的 ChatGPT」，其与众不同之处在于，它可以根据简单的提示创建从歌词到人声和配器的所有内容。
+你甚至可以引导它准确选择想要的流派，从三角洲蓝调（Delta Blues）到电子寒潮，还可以变换方言：听完上面这首歌曲，你可能会惊讶，AI 竟然已经能够操作如此复杂的歌曲制作了吗？这是 Suno 团队近日更新的 V3 模型 —— 首次能够生成广播质量的音乐。
+目前，Suno V3 在以下几个方面具有显著优势：更好的音频质量；更多样化的风格和流派；更强的提示遵从性，包括更少的幻觉和更优雅的结局。
+通过 Suno V3，用户现在可以使用免费账户创建两分钟时长的完整歌曲，具体效果取决于自己选择的流派。
+Suno V3 的音乐排行榜有人大胆展望：「这是下一个 AI 独角兽。
+客观事实是其惊人的迭代速度、声音和语音质量，以及我自己越来越多地使用 Suno 而不是 Spotify 的习惯。
+」还有一些用户感觉到，Suno 正在成为与网易云音乐等软件同样受欢迎的播放器选择：我们也前去试听了一下，完整歌词如下：Suno 团队还表示，V4 已经在开发之中，并将推出一些令人兴奋的新功能。
+值得注意的是，Suno 并未公布过任何训练细节，对于文本，LLM 通常通过预测给定序列中最有可能出现的下一个 token 来工作，但这对于音乐生成来说更具挑战性。
+所以，Suno 应该还使用了扩散模型。
+Suno 首席执行官兼联合创始人 Mikey Shulman 在采访中表示：「并非所有音频都是通过 Transformer 完成的，有很多音频是通过扩散完成的，这两种方法各有利弊。
+」网友开始放飞自我这两天，网友们的二创很多都是围绕周杰伦的经典歌曲。
+比如下面这首《东风破》：https://x.com/hylarucoder/status/1771380757161722341?s=20不过听多了之后，会感觉到缺乏一点「灵魂」：但网友的二创思路永远不会有瓶颈，比如制作一首粤语版《七里香》，方法其实也不复杂，博主 @Gorden Sun 的经验是：1、把歌词扔给 ChatGPT，让它给出粤语拼音标注；2、贴到 Suno 的歌词里，然后在 style 写上「Cantonese song」。
+还有一种打开方式是，将某一首歌曲转化为全新的节奏、加入更丰富的音效，就像这首 AI Remix 版本的《以父之名》：目前，Suno 对公众开放了免费版本。
+帐户存在一些限制，比如每天最多可获得 50 个积分，足以购买 10 首歌曲。
+用户也不能通过免费帐户将这些歌曲用于商业用途，因此它非常适合普通人尝新或创作歌曲。
+如果购买了 Pro 计划（每月 8 美元），用户就可以获得足够的积分每天生成 500 首歌曲，还可以将这些歌曲用于商业用途，例如传到 YouTube 上，甚至将它们上传到 Spotify 或 Apple Music。
+ 但随之而来的，还有人们对版权问题的担忧。
+当用户将其用于短视频等背景音乐的制作时，我们是否真的不需要担心侵权呢？或许出于这方面的考虑，Suno 才不允许用户以特定艺术家的风格生成歌曲或使用真正艺术家的声音。
+试玩下来：歌词、曲风、旋律都不错机器之心输入了一些歌词提示，看一看 Suno V3 有没有这么厉害。
+这里都是用的标准设置，没有进行自定义模式。
+首先输入了第一段简单的「a beautiful girl playing with a lovely dog」（一个漂亮的女孩在与一只可靠的小狗玩耍），结果出来，Suno V3 生成了四个版本的歌曲，这里选取第二个版本「Sunshine and Paws」，欢乐的流行曲风。
+歌词如下：She's walking down the street, with a smile so sweet Her eyes shining bright like the summer heat A lovey dog by her side, wagging its tail Together they stroll, without a care, without fail.She throws a ball, the pup starts to play Chasing it with joy, like there's no end to the day The sun glistens on her radiant face As they run and laugh in their happy embraceOh, she's a sunbeam with paws Bringing light to this world, she's breaking down walls With every wag of its tail, you can hear love's song Oh, she's a beautiful girl playing with a lovey dog.歌曲如下：另外一个版本「Sunshine Smile and Waggin' Tails」还是流行曲风，它的歌词如下：Sippin' on my coffee, I was takin' a stroll When I saw her walkin' with a heart full of gold (ooh-yeah) Her smile was so bright, it lit up the day And the pup by her side, had my heart flyin' away.She threw a frisbee, and that dog caught the air They played and they laughed, it was a picture so rare (ooh-yeah) Her love for that pup, it had no end And in that moment, I found a true friend.Sunshine smile and waggin' tails She's got a way about her, can't help but sail Her laughter so contagious, it brightens the sun With her and her dog, life's just begun (oh-oh-oh).歌曲如下：接着输入第二段歌词提示「an old woman is walking by the West Lake holding an umbrella, looking at the setting sun」（一位老妇人撑伞漫步西湖边，看夕阳西下），这次是民谣曲风，生成的歌词和旋律意境十足，对于音乐门外汉来说非常抓耳。
+歌词如下：In the park, by the lake, she makes her way An old woman, with wisdom etched upon her face Umbrella in hand, she walks this path alone Finding solace in the sunset's golden glow.Every step, a memory, a life well-lived Through joy and sorrow, she still finds strength to give Years have passed, like ripples on the water's edge But her spirit shines, unbroken, undimmed, and pledged.Underneath the evening sky, so peaceful and serene She whispers secrets to the winds, a story yet unseen With every passing day, her heart is filled with grace And in the sunset's fade, she finds her inner space.歌曲如下：另一个版本是「soft sentimental pop」曲风，生成的歌词如下：In the golden hour, by the West Lake she walks (she walks) Umbrella in hand, her heart lighter than a spark (a spark) Every step she takes, memories flooding her mind (her mind) The setting sun reflects the stories she left behindWith every passing moment, a lifetime she recalls (she recalls) Loves she lost, dreams she chased, and the ones that made her fall (made her fall) But she's not one for regrets, no, she's lived a life so true (so true) As the sun bids farewell, she finds peace in her reviewOh, she's a reflection of the setting sun A portrait of beauty, wisdom, and grace With an umbrella and heart full of dreams undone (undone) She walks by the West Lake, a smile on her face (a smile on her face)歌曲如下：一番体验下来，我们发现 Suno V3 的歌词拓展能力很强，曲风也多变，但歌曲旋律似乎有些千篇一律。
+一位玩乐队的同事（莱维飞行吉他手）对 Suno 生成的歌曲给出了以下评价：我觉得 suno 对于不同音乐风格识别、理解、生成还是比较准确的，器乐方面细节还是蛮多的。
+对于人声、以及旋律的处理也蛮好的，只是有些细节的质量方面，可能比较类似抽卡，比如有些人声的韵脚可能不太合适，但无伤大雅，毕竟有的歌手唱歌还有方言味。
+我也相信技术很快可以解决。
+团队简介目前，Suno 团队只有 12 个人，其中 Mikey Shulman、Martin Camacho、Georg Kucsko 和 Keenan Freyberg 为四位联合创始人。
+Mikey Shulman他为 Suno 的联合创始人，此前是 Kensho 机器学习主管，这是一个为机构投资者构建金融分析和机器学习的平台。
+他还是 MIT 斯隆管理学院的讲师，教授课程为金融机器学习和自然语言处理。
+他本科毕业于哥伦比亚大学应用物理专业、博士毕业于哈佛大学物理学专业，曾经研究过物理和量子计算。
+Martin Camacho他为 Suno 联合创始人，此前曾担任 Kensho 的首席架构师。
+他本科在哈佛大学学习计算机科学与数学，并且 18 岁就毕业了。
+Georg Kucsko他为 Suno 联合创始人，此前为 Kensho 机器学习研发主管。
+他感兴趣的研究领域包括自然语言处理、语音识别和非结构化数据分析。
+他本硕毕业于瑞士苏黎世联邦理工学院物理专业，并取得了哈佛大学物理学博士学位，主要研究钻石色心在量子计算和生物传感中的应用。
+Keenan Freyberg他为 Suno 联合创始人，此前曾担任 Kensho 战略推广主管。
+他本科毕业于美国乔治华盛顿大学。
+最后，推荐一些 Suno 的使用攻略：如何使用 Suno AI 制作完整歌曲：https://youtu.be/mZoytG2FGZI如何用 replay 换成别的人声：https://youtu.be/Eh-vKLtYZHASuno AI 高级生成式 AI 音乐提示技巧：https://youtu.be/XINZ-PkLXzw音乐艺术家是如何使用 Suno：https://youtu.be/JCBc3-SNNUYSunoAI 音乐新手指南 by AIGCxChina：https://shimo.im/docs/vVqRMPBgYycW8x3y/readSunoV3 教程及案例收集：https://waytoagi.feishu.cn/wiki/KA1GwEi8yifRmMkOM9icr8EjnAd感兴趣的读者，可以注册 Suno 账号尝试一番～参考链接：https://x.com/FinanceYF5/status/1771748233980600507?s=20https://www.techradar.com/computing/artificial-intelligence/what-is-suno-ai首届中国具身智能大会（CEAI 2024）即将于 2024 年 3 月 30 日至 31 日在上海徐汇西岸美高梅酒店举行。
+本次大会由中国人工智能学会（CAAI）主办，CAAI 具身智能专委会（筹）、同济大学、中国科学院计算技术研究所、上海交通大学、中国经济信息社上海总部联合承办，全球高校人工智能学术联盟协办，机器之心独家 AI 媒体合作。
+盛会将为具身智能领域的学术与产业界搭建一个交流合作的顶级平台，以广泛促进学术分享与交流、产业合作与互动，推动产学研联动发展，提升我国具身智能技术的研究与应用水平。
+立即扫码注册，共享科技盛宴！© THE END 转载请联系本公众号获得授权投稿或寻求报道：content@jiqizhixin.com预览时标签不可点

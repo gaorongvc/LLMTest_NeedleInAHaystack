@@ -1,0 +1,19 @@
+3140参数Grok-1推理加速3.8倍，PyTorch+HuggingFace版来了                                                关注前沿科技                                                  量子位              量子位微信号QbitAI功能介绍追踪人工智能新趋势，关注科技行业新突破明敏 发自 凹非寺量子位 | 公众号 QbitAI马斯克说到做到开源Grok-1，开源社区一片狂喜。
+但基于Grok-1做改动or商用，都还有点难题：Grok-1使用Rust+JAX构建，对于习惯Python+PyTorch+HuggingFace等主流软件生态的用户上手门槛高。
+△图注：Grok登上GitHub热度榜世界第一Colossal-AI团队最新成果，解大家燃眉之急，提供方便易用的Python+PyTorch+HuggingFace Grok-1，能将推理时延加速近4倍！现在，模型已在HuggingFace、ModelScope上发布。
+HuggingFace下载链接：https://huggingface.co/hpcai-tech/grok-1ModelScope下载链接：https://www.modelscope.cn/models/colossalai/grok-1-pytorch/summary性能优化结合Colossal-AI在AI大模型系统优化领域的丰富积累，已迅速支持对Grok-1的张量并行。
+在单台8H800 80GB服务器上，推理性能相比JAX、HuggingFace的auto device map等方法，推理时延加速近4倍。
+使用教程下载安装Colossal-AI后，启动推理脚本即可。
+./run_inference_fast.sh hpcaitech/grok-1模型权重将会被自动下载和加载，推理结果也能保持对齐。
+如下图中Grok-1 greedy search的运行测试。
+更多详情可参考grok-1使用例：https://github.com/hpcaitech/ColossalAI/tree/main/examples/language/grok-1庞然大物Grok-1此次开源，xAI发布了Grok-1的基本模型权重和网络架构。
+具体来说是2023年10月预训练阶段的原始基础模型，没有针对任何特定应用（例如对话）进行微调。
+结构上，Grok-1采用了混合专家（MoE）架构，包含8个专家，总参数量为314B（3140亿），处理Token时，其中的两个专家会被激活，激活参数量为86B。
+单看这激活的参数量，就已经超过了密集模型Llama 2的70B，对于MoE架构来说，这样的参数量称之为庞然大物也毫不为过。
+更多参数信息如下：窗口长度为8192tokens，精度为bf16Tokenizer vocab大小为131072（2^17），与GPT-4接近；embedding大小为6144（48×128）；Transformer层数为64，每层都有一个解码器层，包含多头注意力块和密集块；key value大小为128；多头注意力块中，有48 个头用于查询，8 个用于KV，KV 大小为 128；密集块（密集前馈块）扩展因子为8，隐藏层大小为32768在GitHub页面中，官方提示，由于模型规模较大（314B参数），需要有足够GPU和内存的机器才能运行Grok。
+这里MoE层的实现效率并不高，选择这种实现方式是为了避免验证模型的正确性时需要自定义内核。
+模型的权重文件则是以磁力链接的形式提供，文件大小接近300GB。
+值得一提的是，Grok-1采用的是Apache 2.0 license，商用友好。
+目前Grok-1在GitHub上的标星已达到43.9k Stars。
+量子位了解，Colossal-AI将在近期进一步推出对Grok-1在并行加速、量化降低显存成本等优化，欢迎持续关注。
+Colossal-AI开源地址：https://github.com/hpcaitech/ColossalAI— 完 —评选报名即将截止！2024年值得关注的AIGC企业&产品量子位正在评选2024年最值得关注的AIGC企业、 2024年最值得期待的AIGC产品两类奖项，欢迎报名评选！评选报名截至2024年3月31日 中国AIGC产业峰会同步火热筹备中，了解更多请戳：Sora时代，我们该如何关注新应用？一切尽在中国AIGC产业峰会商务合作请联络微信：18600164356 徐峰活动合作请联络微信：18801103170 王琳玉点这里👇关注我，记得标星噢一键三连「分享」、「点赞」和「在看」科技前沿进展日日相见 ~ 预览时标签不可点

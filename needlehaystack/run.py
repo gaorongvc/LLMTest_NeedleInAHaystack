@@ -6,7 +6,7 @@ from jsonargparse import CLI
 
 from . import LLMNeedleHaystackTester, LLMMultiNeedleHaystackTester
 from .evaluators import Evaluator, LangSmithEvaluator, OpenAIEvaluator
-from .providers import Anthropic, ModelProvider, OpenAI, qwen, DifyX
+from .providers import Anthropic, ModelProvider, OpenAI, qwen, DifyX, MoonshotAI
 from .providers.qwen import QianWenProvider
 
 load_dotenv()
@@ -19,9 +19,9 @@ class CommandArgs():
     model_name: str = "gpt-3.5-turbo-0125"
     evaluator_model_name: Optional[str] = "gpt-4-0125-preview"
     needle: Optional[
-        str] = "\nThe best thing to do in San Francisco is eat a sandwich and sit in Dolores Park on a sunny day.\n"
+        str] = "\n在深圳，最值得做的事情就是在阳光明媚的日子里，躺在深圳湾公园的草坪上发呆。\n"
     haystack_dir: Optional[str] = "WechatPapers"
-    retrieval_question: Optional[str] = "What is the best thing to do in San Francisco?"
+    retrieval_question: Optional[str] = "在深圳最值得做什么事情？"
     results_version: Optional[int] = 1
     context_lengths_min: Optional[int] = 1000
     context_lengths_max: Optional[int] = 16000
@@ -69,8 +69,10 @@ def get_model_to_test(args: CommandArgs) -> ModelProvider:
             return Anthropic(model_name=args.model_name)
         case "qwen":
             return qwen.QianWenProvider(model_name=args.model_name)
-        case "moonshot":
+        case "difyx":
             return DifyX(api_key=args.model_name)
+        case "moonshot":
+            return MoonshotAI(api_key=args.model_name)
         case _:
             raise ValueError(f"Invalid provider: {args.provider}")
 

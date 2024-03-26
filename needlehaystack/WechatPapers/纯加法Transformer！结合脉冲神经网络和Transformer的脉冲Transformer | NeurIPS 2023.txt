@@ -1,0 +1,76 @@
+纯加法Transformer！结合脉冲神经网络和Transformer的脉冲Transformer | NeurIPS 2023                                                nemo                                                  CVer              CVer微信号CVerNews功能介绍一个专注于计算机视觉方向的公众号。
+分享计算机视觉、深度学习、人工智能、自动驾驶和高校等高质量内容。
+点击下方卡片，关注“CVer”公众号AI/CV重磅干货，第一时间送达点击进入—>【Transformer和多模态】交流群添加微信：CVer5555，小助手会拉你进群！扫描下方二维码，加入CVer学术星球！可以获得最新顶会/顶刊上的论文idea和CV从入门到精通资料，及最前沿应用！发论文/搞科研/涨薪，强烈推荐！作者：nemo  | 编辑：极市平台https://zhuanlan.zhihu.com/p/660364150本文提出一种Spike-driven Transformer模型，首次将spike-driven计算范式融入Transformer。
+本文所提出的SDSA算子能耗比原始self-attention的能耗低87.2倍。
+所提出的Spike-driven Transformer在ImageNet-1K上取得了77.1%的SNN领域内SOTA结果。
+论文地址：https://arxiv.org/abs/2307.01694代码地址：https://github.com/BICLab/Spike-Driven-Transformer受益于基于二进制脉冲信号的事件驱动（Spike-based event-driven，Spike-driven）计算特性，脉冲神经网络（Spiking Neural Network，SNN）提供了一种低能耗的深度学习选项 [1]。
+本文提出一种Spike-driven Transformer模型，首次将spike-driven计算范式融入Transformer。
+整个网络中只有稀疏加法运算。
+具体地，所提出的Spike-driven Transformer具有四个独特性质：事件驱动（Event-driven）。
+网络输入为0时，不会触发计算。
+二进制脉冲通信（Binary spike communication）。
+所有与脉冲张量相关的矩阵乘法都可以转化为稀疏加法。
+脉冲驱动自注意力（Spike-Driven Self-Attention，SDSA）算子。
+脉冲形式Q，K，V矩阵之间运算为掩码（mask）和加法。
+线性注意力（Linear attention）。
+SDSA算子的计算复杂度与token和channel都为线性关系。
+本文所提出的SDSA算子能耗比原始self-attention的能耗低87.2倍。
+所提出的Spike-driven Transformer在ImageNet-1K上取得了77.1%的SNN领域内SOTA结果。
+背景当前SNN模型的任务性能较低，难以满足实际任务场景中的精度要求。
+如何结合Transformer模型的高性能和SNN的低能耗，是目前SNN域内的研究热点。
+现有的spiking Transformer模型可以简单地被认为是异构计算模型，也就是将SNN中的脉冲神经元和Transformer模型中的一些计算单元（例如：dot-product, softmax, scale）相结合，既有乘加运算（Multiply-and-ACcumulate，MAC），也有加法运算（ACcumulate，AC）。
+虽然能保持较好的任务精度，但不能完全发挥出SNN的低能耗优势。
+近期的一项工作，SpikFormer[2]，展示了在spiking self-attention中，softmax操作是可以去掉的。
+然而，SpikFormer中保留了spiking self-attention中的scale操作。
+原因在于，脉冲形式Q，K，V矩阵之间运算会导致输出中会包含一些数值较大的整数，为避免梯度消失，SpikFormer保留了scale操作（乘法）。
+另一方面，SpikFormer采用Spike-Element-Wise（SEW）[3]的残差连接，也就是，在不同层的脉冲神经元输出之间建立shortcut。
+这导致与权重矩阵进行乘法操作的脉冲张量实际上是多bit脉冲（整数）。
+因此，严格来说，SpikFormer是一种整数驱动Transformer（Integer-driven Transformer），而不是脉冲驱动Transformer。
+方法本文提出了Spike-driven Transformer，如下图所示，以SpikFormer[2]中的模型为基础，做出两点关键改进：提出一种脉冲驱动自注意力（SDSA）算子。
+目前SNN领域中仅有Spike-driven Conv和spike-driven MLP两类算子。
+本文所提出的Spike-driven Self-attention算子，为SNN领域提供了一类新算子。
+调整shortcut。
+将网络中的SEW全部调整为Membrane Shortcut（MS）[4,5]，也就是在不同层的脉冲神经元膜电势之间建立残差连接。
+SDSA算子。
+ANN中的原始自注意力（Vanilla Self-Attention，VSA）机制的表达式为： 是scale因子。
+VSA的计算复杂度为  为token 个数,  为channel个数。
+本文所提出的SDSA算子的表达式为：其中  是脉冲形式的  矩阵，  为哈达玛积。
+SDSA算子的计算复杂度为  。
+如下图所示。
+总体来说，SDSA算子有两个特点：使用哈达玛积替换了  之间的矩阵乘法。
+逐列求和  以及一个额外的脉冲神经元层  代替了 softmax和scale操作。
+ 算子本身几乎不消耗能量。
+首先, 由于  都为二进制脉冲矩阵, 它们之间的哈达玛积可以看作是mask操作。
+其次, 整个公式 (2) 中只有  带来的稀疏加法, 根据统计,  后的非零值比例约为 0.02 , 因此这部分加法的能耗几乎可以忽略不计。
+MS残差连接。
+目前SNN领域中一共有三种残差连接。
+一种是直接参考ResNet的Vanilla Shortcut [6]，在不同层的膜电势和脉冲之间建立捷径；一种是SEW [3]，在不同层的脉冲之间建立捷径；一种是MS [4]，在不同层的膜电势之间建立捷径。
+MS连接之后会跟随一个脉冲神经元，这可以将膜电势之和转化为0/1，从而保证网络中所有脉冲张量与权重矩阵之间的乘法可以被转换为加法。
+因此，本文使用MS残差来保证spike-driven。
+SNN中的算子及其能耗评估Spike-driven的核心是，与脉冲矩阵相关的乘法运算都可以被转换为稀疏加法。
+当SNN运行在神经形态芯片上时，spike-driven计算范式能够发挥出低能耗优势。
+Spike-driven Conv和Spike-driven MLP。
+脉冲驱动计算有两层含义：事件驱动和二进制脉冲通信。
+前者保证了输入为0时，不会触发计算；后者保证了有脉冲输入时，触发的计算为加法。
+当前SNN领域中，两类典型的算子是spike-driven Conv和spike-driven MLP。
+在进行矩阵乘法时，如果其中一个矩阵是脉冲形式，那么矩阵乘法可以通过寻址算法被转换为加法。
+Spike-driven Self-Attention。
+SDSA中  之间的运算包含了三个脉冲矩阵之间的运算。
+那么就有两种可行的方式。
+第一，与spike-driven Conv和spike-driven MLP中一致，每两个脉冲矩阵之间的运算为乘法，然后被转换为加法，这也是[2]中采用的方法。
+第二，本文中所采用的方式，两个脉冲之间的运算为哈达玛积，因为脉冲矩阵中只有0或者1，所以这种操作相当于mask操作，可以被当前的神经形态芯片[7]所支持。
+在理论评估SNN能耗时，可以简单的认为，SNN的能耗为：同等架构ANN的FLOPs  脉冲发放率  单个加法操作的能耗  时间步。
+下图给出了ANN中的自注意力和SNN中的脉冲驱动自注意力部分之间的能耗对比。
+结果Spike-driven Transformer在ImageNet上的结果如下所示。
+本文取得了SNN域的SOTA结果。
+不同规模模型下，本文的SDSA与ANN中的VSA之间的能耗对比如下图所示（包含  生成所需的能耗）。
+可以看出，由于SDSA是线性注意力，网络规模越大，SDSA的能效优势越突出。
+本文中关于SDSA和MS的消融实验。
+MS会带来性能提升，SDSA则会导致性能损失。
+总体来说，性能增益大于损失。
+注意力图可视化如下。
+全文到此结束，更多细节建议查看原文。
+本文所有代码和模型均已开源，欢迎关注我们的工作。
+[1] Roy, Kaushik, Akhilesh Jaiswal, and Priyadarshini Panda. "Towards spike-based machine intelligence with neuromorphic computing."Nature (2019).[2] Zhou, Zhaokun, Yuesheng Zhu, Chao He, Yaowei Wang, Shuicheng Yan, Yonghong Tian, and Li Yuan. "Spikformer: When spiking neural network meets transformer."ICLR (2023).[3] Fang, Wei, Zhaofei Yu, Yanqi Chen, Tiejun Huang, Timothée Masquelier, and Yonghong Tian. "Deep residual learning in spiking neural networks."NeurIPS (2021).[4] Hu, Yifan, Lei Deng, Yujie Wu, Man Yao, and Guoqi Li. "Advancing Spiking Neural Networks towards Deep Residual Learning."arXiv preprint arXiv:2112.08954 (2021).[5] Yao, Man, Guangshe Zhao, Hengyu Zhang, Yifan Hu, Lei Deng, Yonghong Tian, Bo Xu, and Guoqi Li. "Attention spiking neural networks."IEEE T-PAMI (2023).[6] Zheng, Hanle, Yujie Wu, Lei Deng, Yifan Hu, and Guoqi Li. "Going deeper with directly-trained larger spiking neural networks." AAAI (2021).[7] Pei, Jing, Lei Deng, Sen Song, Mingguo Zhao, Youhui Zhang, Shuang Wu, Guanrui Wang, Guoqi Li et al. "Towards artificial general intelligence with hybrid Tianjic chip architecture."Nature (2019).何恺明在MIT授课的课件PPT下载在CVer公众号后台回复：何恺明，即可下载本课程的所有566页课件PPT！赶紧学起来！CVPR 2024 论文和代码下载在CVer公众号后台回复：CVPR2024，即可下载CVPR 2024论文和代码开源的论文合集多模态和扩散模型交流群成立扫描下方二维码，或者添加微信：CVer5555，即可添加CVer小助手微信，便可申请加入CVer-多模态和扩散模型微信交流群。
+另外其他垂直方向已涵盖：目标检测、图像分割、目标跟踪、人脸检测&识别、OCR、姿态估计、超分辨率、SLAM、医疗影像、Re-ID、GAN、NAS、深度估计、自动驾驶、强化学习、车道线检测、模型剪枝&压缩、去噪、去雾、去雨、风格迁移、遥感图像、行为识别、视频理解、图像融合、图像检索、论文投稿&交流、PyTorch、TensorFlow和Transformer、NeRF等。
+一定要备注：研究方向+地点+学校/公司+昵称（如多模态或者扩散模型+上海+上交+卡卡），根据格式备注，可更快被通过且邀请进群▲扫码或加微信号: CVer5555，进交流群CVer计算机视觉（知识星球）来了！想要了解最新最快最好的CV/DL/AI论文速递、优质实战项目、AI行业前沿、从入门到精通学习教程等资料，欢迎扫描下方二维码，加入CVer计算机视觉（知识星球），已汇集近万人！▲扫码加入星球学习▲点击上方卡片，关注CVer公众号整理不易，请点赞和在看预览时标签不可点

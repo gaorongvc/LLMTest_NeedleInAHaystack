@@ -1,0 +1,11 @@
+ALVR登陆苹果TestFlight，支持Vision Pro串流SteamVR游戏          原创映维网Nweon                映维网Nweon              映维网Nweon微信号NweonXR功能介绍映维网是一个始于2014年10月的增强现实（AR）、虚拟现实（VR）产业信息数据平台，专注于AR/VR产业发展及市场教育培养，致力于引导全球AR/VR产业发展，服务于全球各地的AR/VR创业者。
+这意味着Vision Pro用户可以轻松下载所述工具并串流开玩SteamVR内容（映维网Nweon 2024年03月23日）熟悉SteamVR串流工具的用户可能会知道名为Air Light VR（ALVR）的开源项目。
+现在，TestFlight已经批准了ALVR，而这意味着Vision Pro用户可以轻松下载所述工具并串流开玩SteamVR内容。
+自Vision Pro发售以来，ALVR的移植工作就一直在进行中，优化代码以最小化抖动和故障，将刷新率提高到96Hz，实现HDR高动态范围显示输出，并增加了将Vision Pro的手部追踪传递到SteamVR骨骼输入的支持等等。
+现在，ALVR已经获得TestFlight的批准，亦即Vision Pro用户可以轻松下载所述工具并串流开玩SteamVR内容。
+作为说明，TestFlight可以理解成Meta的App Lab，有兴趣的用户都可以通过TestFlight下载尝试开发者提供的Beta版应用程序。
+当然，苹果Vision Pro缺乏可追踪控制器，这意味着它并不是开玩大多数SteamVR游戏的实用方式。
+但增加了将Vision Pro的手部追踪传递到SteamVR骨骼输入的支持后，ALVR将允许你通过一系列的手势来模拟Index控制器的手指追踪功能。
+不过，这对于大多数VR游戏而言依然不是最适合的操作方式。
+目前ALVR已经登陆TestFlight，有兴趣的Vision Pro用户可以进行尝试。
+---原文链接：https://news.nweon.com/119156预览时标签不可点
