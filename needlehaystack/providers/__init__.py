@@ -3,3 +3,4 @@ from .model import ModelProvider
 from .openai import OpenAI
 from .difyx import DifyX
 from .moonshot import MoonshotAI
+from .zhipu import Zhipu

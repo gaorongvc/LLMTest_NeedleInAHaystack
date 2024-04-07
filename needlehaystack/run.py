@@ -6,7 +6,7 @@ from jsonargparse import CLI
 
 from . import LLMNeedleHaystackTester, LLMMultiNeedleHaystackTester
 from .evaluators import Evaluator, LangSmithEvaluator, OpenAIEvaluator
-from .providers import Anthropic, ModelProvider, OpenAI, qwen, DifyX, MoonshotAI
+from .providers import Anthropic, ModelProvider, OpenAI, qwen, DifyX, MoonshotAI, Zhipu
 from .providers.qwen import QianWenProvider
 
 load_dotenv()
@@ -73,6 +73,8 @@ def get_model_to_test(args: CommandArgs) -> ModelProvider:
             return DifyX(api_key=args.model_name)
         case "moonshot":
             return MoonshotAI(api_key=args.model_name)
+        case "zhipu":
+            return Zhipu(api_key=args.model_name)
         case _:
             raise ValueError(f"Invalid provider: {args.provider}")
 
