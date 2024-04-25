@@ -69,6 +69,12 @@ Following command runs the test for anthropic model `claude-2.1` for a single co
 needlehaystack.run_test --provider anthropic --model_name "claude-2.1" --document_depth_percents "[50]" --context_lengths "[2000]"
 ```
 
+Following command runs the test for dify model `app-xxx`
+
+```zsh
+needlehaystack.run_test --provider difyx --model_name "app-xxx" --document_depth_percents "[10,50,90]" --context_lengths "[100000]"
+```
+
 ### For Contributors
 
 1. Fork and clone the repository.
