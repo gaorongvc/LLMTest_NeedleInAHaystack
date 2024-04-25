@@ -17,11 +17,11 @@ class CommandArgs():
     provider: str = "openai"
     evaluator: str = "openai"
     model_name: str = "gpt-3.5-turbo-0125"
-    evaluator_model_name: Optional[str] = "gpt-4-0125-preview"
+    evaluator_model_name: Optional[str] = "gpt-4-turbo-2024-04-09"
     needle: Optional[
-        str] = "\n在深圳，最值得做的事情就是在阳光明媚的日子里，躺在深圳湾公园的草坪上发呆。\n"
-    haystack_dir: Optional[str] = "WechatPapers"
-    retrieval_question: Optional[str] = "在深圳最值得做什么事情？"
+        str] = "\nIn Shenzhen, the most worthwhile thing to do is to lie on the grass in Shenzhen Bay Park and daydream on a sunny day.\n"
+    haystack_dir: Optional[str] = "PaulGrahamEssays"
+    retrieval_question: Optional[str] = "What is the most worthwhile thing to do in Shenzhen?"
     results_version: Optional[int] = 1
     context_lengths_min: Optional[int] = 1000
     context_lengths_max: Optional[int] = 16000
